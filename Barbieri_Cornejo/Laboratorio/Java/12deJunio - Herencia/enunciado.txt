@@ -1,0 +1,57 @@
+
+a) Clasifique y organice las carpetas creadas en los puntos 1 (con sólo 4 clases de las 9 que pedí crear) , punto 2, punto 3 y punto 4 de la clase del 27 de mayo usando la palabra package en el encabezado de cada archivo. Y 
+
+Ej:
+	Elijo las clases Cama, Alfombra, Mesa, Lámpara. 
+
+	------------------------------   ---------------------------------
+	package habitacion;              package habitacion;
+	public class Cama{               public class Alfombra{
+		...                          	...
+	}                                }
+	------------------------------   ---------------------------------
+    
+	------------------------------   ---------------------------------
+	package habitacion;              package habitacion;
+	public class Mesa{               public class Lampara{
+		...                          	...
+	}                                }
+	------------------------------   ---------------------------------
+
+
+Nota: a partir de ahora, toda clase deberá ser adecuadamente empaquetada 
+con un nombre declarativo que represente el grupo/subgrupo al que pertenece.
+
+b) 
+
+b.1) Dado el mismo conjunto de atributos que tienen las clases creadas para representar la habitación, y el hecho de que la POO se basa en repetir la menor cantidad de código y reusarlo (entre otras cosas), elegir cuatro de ellas (ej: Cama, Alfombra, Mesa, Lámpara) y hacer que desciendan de una clase que contenga aquellos atributos que comparten las cuatro clases elegidas 
+(peso, color y material).
+
+b.2) Elegir otras 4 clases, distintas a las usadas para el ítem a y b (ej: Ventana, Armario, Biblioteca, Silla) y crear una clase derivada (subclase) de 
+cada una de las clases.
+
+Ej: 
+	------------------------------   ---------------------------------
+	package sillas;                  package sillas;
+	public class Silla{              public class SillaMecedora{
+		/*
+		sin constructores
+		definidos
+		*/
+		...                          	...
+	}                                }
+	------------------------------   ---------------------------------
+
+Las 4 clases no deben tener constructores por defecto.
+Las subclases sí deben tener un constructor por defecto y también deben tener
+2 constructores que tengan parámetros. Usar la palabra reservada o cláusula this().
+
+b.3) Realizar lo pedido en el ítem b.1 con el punto 2.
+
+c) los dos personajes elegidos en el punto 3, tienen alguna relación?
+   c.1) Si la tienen, crear una superclase que contenga los atributos y métodos
+   que tengan en común y reutilicen el código.
+   c.2) Si no la tienen, crear un personaje más que tenga algún tipo de relación con uno de los personajes elegidos y hacer lo pedido en el ítem c.1
+
+d) Diseñe una jerarquía de clases. En la raíz de la jerarquía (clase Bicicleta) defina un método imprimirAtributos que muestre por consola los atributos de lo que es una bicicleta.
+En las subclases (MontainBike y Playera) redefina el método imprimirAtributos de forma tal que se impriman los atributos base que hereda y además los que adicionan, para esto reutilice el método imprimirAtributos definido en la clase base mediante el uso de la palabra reservada super.

@@ -1,0 +1,48 @@
+
+Recordar:
+
+modificadores de acceso sobre átributos, métodos.
+
+		  misma   clase de    subclase de   clase de
+		  clase   mismo pkg    otro pkg      otro pkg
+public 		x         x           x             x
+protected	x         x           x             
+default 	x         x           
+private 	x 
+
+
+Para que una subclase acceda a los atributos o 
+métodos de la superclase se usa la palabra super.
+
+ej:
+	--------------------------------
+	package super;
+
+	SuperClaseA{
+		protected int a;
+
+		...
+
+		protected int metodoEquisA(){
+			... 
+		}
+	}
+	--------------------------------
+
+	---------------------------------
+	package sub;
+
+	SubClaseDeA{
+		private a;
+
+		public metodoEquis(){
+			return super.a > 1;
+		}
+
+		public int otroMetodoEquis(){
+			return super.metodoEquisA();
+		}
+
+		...
+	}
+	---------------------------------

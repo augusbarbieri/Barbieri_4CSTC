@@ -1,0 +1,19 @@
+
+Un grupo de biólogos requiere un sistema que permita administrar los experimentos. Se dispone de n laboratorios. En cada momento puede haber hasta n experimentos en curso, no más de uno por laboratorio. Cuando se quiere iniciar un experimento,
+el sistema selecciona algún laboratorio libre donde llevarlo a cabo. A cada experimento se le van registrando observaciones. Una observación puede tener tres posibles resultados:
+
+ (1) observación anómala, 
+ (2) observación legítima que confirma la hipótesis, 
+ (3) observación legítima que contradice la hipótesis. 
+
+Si en cualquier momento el número de observaciones anómalas supera el número de observaciones legítimas,
+el experimento se cancela al instante. Un experimento está avanzado si cuenta con más de treinta observaciones legítimas.
+Si se quiere iniciar un nuevo experimento y no hay laboratorios libres, se desaloja alguno de los experimentos avanzados,
+de tal manera que el laboratorio que ocupaba se destine al nuevo experimento. En caso de que no haya laboratorios libres 
+ni experimentos avanzados, no es posible iniciar un nuevo experimento. Además, se quiere conocer en todo momento qué cantidad de los experimentos avanzados (dentro del conjunto de experimentos actualmente vigentes) son consistentes con la hipótesis.
+Un experimento es consistente con la hipótesis si la mayoría de las observaciones legítimas correspondientes a ese experimento confirman la hipótesis.
+
+Crear todas las clases que se consideren necesarias para programar el sistema pedido.
+Puede usar la clase Scanner.
+
+

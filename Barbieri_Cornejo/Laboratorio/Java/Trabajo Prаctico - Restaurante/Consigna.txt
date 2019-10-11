@@ -1,0 +1,100 @@
+El trabajo consiste en implementar en Java un programa que será usado por una cadena de restaurantes. 
+
+El programa deberá servir para:
+
+*) Guardar un registro diario de los pedidos tomados por los mozos. por ArrayList
+*) Consultar el número de mesa correspondiente a un OBJETO plato.
+*) Consultar el número de pedido correspondiente a un OBJETO plato.
+
+(si se piden dos platos del mismo tipo en una misma mesa, el objeto
+plato tendrá asociado sólo un número de pedido)
+
+*) Consultar la cantidad de platos pedida por tipo de plato. OBJETOS
+*) Cuál fué el plato más pedido del día.
+*) Cuál fué el plato menos pedido del día. 
+
+La cantidad de mesas del restaurante será variable pues cuando las mesas posicionadas dentro del local están todas ocupadas y el clima lo permita, se arman nuevas mesas en la parte externa del local.
+
+El restaurante ofrece una cantidad de 5 platos:
+"Milanesa con puré de papas"
+"Ravioles rellenos con carne"
+"Pizza a la Piedra"
+"Polenta con salsa Fileto"
+"Arroz primavera" 
+
+Tal lista será variable pues puede suceder que un cliente pida un plato ofrecido con el agregado de algún ingrediente.
+
+Cada sucursal tendrá un único cocinero.
+
+A modo de EJEMPLO, se detallará cómo se hará un registro de 3 platos en una de las sucursales de la cadena de restaurantes:
+
+Restarurante sucursal1 = new Restaurante();
+
+//Inicialmente, tendrá 5 mesas
+Mesa mesa1 = new Mesa();
+Mesa mesa2 = new Mesa();
+Mesa mesa3 = new Mesa();
+Mesa mesa4 = new Mesa();
+Mesa mesa5 = new Mesa();
+
+sucursal1.agregarMesa(mesa1);
+sucursal1.agregarMesa(mesa2);
+sucursal1.agregarMesa(mesa3);
+sucursal1.agregarMesa(mesa4);
+sucursal1.agregarMesa(mesa5);
+
+
+//Registro de plato
+Plato p1 = new Plato();
+p1.setNombre("Milanesa con puré de papas");
+p1.setNumDeMesa(3);
+p1.setNumeroDePedido(1);
+p1.setCantidad(1);
+mesa3.agregarPedidoDeClienteActual(p1);
+sucursal1.agregarPlatoAPreparar(p1);
+
+
+//Registro de plato
+Plato p2 = new Plato();
+p2.setNombre("Ravioles rellenos con carne");
+p2.setNumDeMesa(2);
+p2.setNumeroDePedido(2);
+p2.setCantidad(3);
+mesa2.agregarPedidoDeClienteActual(p2);
+sucursal1.agregarPlatoAPreparar(p2);
+
+
+//Registro de plato
+Plato p3 = new Plato();
+p3.setNombre("Pizza a la Piedra");
+p3.setNumDeMesa(2);
+p3.numeroDePedido(3);
+p3.cantidad(1);
+mesa2.agregarPedidoDeClienteActual(p3);
+sucursal1.agregarPlatoAPreparar(p3);
+
+Hasta ahora, la lista de pedidos que tiene sucursal1 es:
+<p1, p2, p3>
+
+La lista de pedidos de platos actuales que tiene la mesa 2, es:
+<p2, p3>
+
+Cuando un cliente desocupa una mesa, la lista de pedidos asociada a la mesa
+se debe vaciar. No sucede con la lista de pedidos del restaurante pues se usará ésta información luego. Cuando un nuevo cliente ocupa una mesa, la lista de platos pedidos actuales se vuelve a llenar de nuevo.
+
+Se deben proponer y programar las clases necesarias para cumplir con lo 
+pedido. 
+
+Se deben testear los métodos creando casos de tests y colocarlos 
+en un archivo llamanos Main.java
+
+Para ello, usar el siguiente fragmento de código:
+
+   System.out.print("TEST nombreDeFuncion. Caso nombreDeCaso. ");
+   tipoDeVariable nombreVar1 = valorEsperadoDeLaFunción;
+   tipoDeVariable nombreVar2 = nombreDeFuncion(argumento);
+   System.out.println((nombreVar1==nombreVar2)?"Pasó el test.":"No pasó el test.");
+   
+
+Todo debe compilar, los nombres de las variables deben ser declarativos y
+todo debe estar bien indentado.

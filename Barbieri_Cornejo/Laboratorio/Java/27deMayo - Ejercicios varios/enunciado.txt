@@ -1,0 +1,71 @@
+
+Resolver los siguientes ejercicios:
+
+Nota: recordar que cada clase es una representación de algo.
+      Ejemplo: la clase Persona, representa al conjunto de personas con
+      los aspectos y comportamientos de la misma que consideramos importantes/necesarios.
+      Si es importante conocer sólo la edad de una persona, no es necesario colocar
+      el nombre de la misma como atributo.
+      Recordar también que cuando hacemos Persona p1 = new Persona(); 
+      estamos creando un elemento de ese conjunto de personas. 
+
+A la hora de representar conjuntos de cosas reales con clases, es necesario tener en
+cuenta lo siguiente:
+
+Cuándo usamos un conjunto (HashSet)?
+Cuando no importa el orden de los elementos contenidos y
+tampoco hay elementos repetidos.
+Ejemplo: en el ejercicio 8, se debe devolver un conjunto con
+         nombres de animales. En el mismo no importa el orden
+         y no deben ser repetidos.
+
+
+Cuándo usamos una lista (ArrayList)?
+Cuando sí importa el orden de los elementos contenidos y
+sí pueden haber repetidos.
+Ejemplo: una fila de personas cuyo orden depende del orden
+          de llegada. El que llega primero está en el ĺugar 
+          correspondiente al índice 0, el que llega segundo, 
+          corresponde al índice 1, ..., etc.
+
+Cuándo usamos una asociación de valores (HashMap)?
+Cuando se debe asociar dos objetos de distinto o igual tipo.
+Ejemplo: para representar la memoria de la calculadora
+         donde se asociaba un string con un valor.
+
+
+1) Representar una habitación. 
+   En éste caso, nos interesará el peso, color y material (con el que está hecho) de cada elemento presente.
+   Mesa, silla, ventana, cama, etc.
+   Elegir 9 elementos.
+   Colocar ésta resolución en una carpeta llamada "habitación".
+
+2) Representar una mochila con útiles escolares.
+   En éste caso, nos interesará el precio y marca de cada elemento.
+   Colocar ésta resolución en una carpeta llamada "mochila"
+
+3) Representar dos personajes a elección.
+   Colocar ésta resolución en una carpeta llamada "personajes"
+
+4) Representar el aula de clases (incluir alumnos, computadoras, etc )
+   Elegir 5 elementos.
+   Colocar ésta resolución en una carpeta llamada "aula"
+
+5) Representar al conjunto de jugadores de fútbol para luego
+   obtener a los jugadores cuyas camisetas tienen números impares.
+
+6) Crear una clase que nos permita saber cuántas materias dicta cada
+   profesor del instituto. Utilizar sólo un atributo.
+
+7) Sea una lista de invitados, se necesita saber cuántos de ellos
+   son personas cuyos nombres empiezan con la letra A.
+   Crear una clase que nos permita obtener dicha información.
+
+8) Sea un zoológico, se necesita obtener los nombres de todos
+   aquellos animales presentes en el mismo que son hervíboros.
+
+9) Crear una clase que nos permitan saber cuántos alumnos del instituto 
+   son mayores de edad. Utilizar sólo un atributo.
+
+
+

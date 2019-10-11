@@ -1,0 +1,271 @@
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
+
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
+USE `mydb` ;
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Usuario`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Usuario` (
+  `dni` INT NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(45) NOT NULL,
+  `apellido` VARCHAR(45) NOT NULL,
+  `email` VARCHAR(45) NOT NULL,
+  `contraseña` VARCHAR(45) NOT NULL,
+  `direccion` VARCHAR(45) NULL,
+  PRIMARY KEY (`dni`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Ram`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Ram` (
+  `idRa` INT NOT NULL AUTO_INCREMENT,
+  `precio` DOUBLE NULL,
+  `modelo` VARCHAR(45) NULL,
+  `marca` VARCHAR(45) NULL,
+  `descripcion` VARCHAR(45) NULL,
+  PRIMARY KEY (`idRa`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Disco`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Disco` (
+  `idDisco` INT NOT NULL AUTO_INCREMENT,
+  `descripcion` VARCHAR(45) NULL,
+  `precio` DOUBLE NULL,
+  `modelo` VARCHAR(45) NULL,
+  `marca` VARCHAR(45) NULL,
+  PRIMARY KEY (`idDisco`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Cooler`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Cooler` (
+  `idCooler` INT NOT NULL AUTO_INCREMENT,
+  `marca` VARCHAR(45) NULL,
+  `modelo` VARCHAR(45) NULL,
+  `descripcion` VARCHAR(500) NULL,
+  `precio` DOUBLE NULL,
+  PRIMARY KEY (`idCooler`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Procesador`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Procesador` (
+  `idProcesador` INT NOT NULL AUTO_INCREMENT,
+  `precio` DOUBLE NULL,
+  `marca` VARCHAR(45) NULL,
+  `modelo` VARCHAR(45) NULL,
+  `generacion` VARCHAR(45) NULL,
+  `descripcion` VARCHAR(45) NULL,
+  PRIMARY KEY (`idProcesador`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Mother`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Mother` (
+  `idMo` INT NOT NULL AUTO_INCREMENT,
+  `modelo` VARCHAR(45) NULL,
+  `marca` VARCHAR(45) NULL,
+  `descripcion` VARCHAR(45) NULL,
+  `precio` DOUBLE NULL,
+  PRIMARY KEY (`idMo`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Gabinete`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Gabinete` (
+  `idGabinete` INT NOT NULL AUTO_INCREMENT,
+  `descripcion` VARCHAR(45) NULL,
+  `marca` VARCHAR(45) NULL,
+  `modelo` VARCHAR(45) NULL,
+  `precio` DOUBLE NULL,
+  PRIMARY KEY (`idGabinete`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Fuente`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Fuente` (
+  `idFuente` INT NOT NULL AUTO_INCREMENT,
+  `descripcion` VARCHAR(45) NULL,
+  `marca` VARCHAR(45) NULL,
+  `modelo` VARCHAR(45) NULL,
+  `precio` DOUBLE NULL,
+  `watage` INT NULL,
+  PRIMARY KEY (`idFuente`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`PlacaDeVideo`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`PlacaDeVideo` (
+  `idPlacaDe` INT NOT NULL AUTO_INCREMENT,
+  `descripcion` VARCHAR(45) NULL,
+  `precio` DOUBLE NULL,
+  `marca` VARCHAR(45) NULL,
+  `modelo` VARCHAR(45) NULL,
+  `vram` INT NULL,
+  PRIMARY KEY (`idPlacaDe`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Computadora`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Computadora` (
+  `idComputadora` INT NOT NULL AUTO_INCREMENT,
+  `precio` DOUBLE NOT NULL,
+  `Ram_idRa` INT NOT NULL,
+  `Disco_idDisco` INT NOT NULL,
+  `Cooler_idCooler` INT NOT NULL,
+  `Procesador_idProcesador` INT NOT NULL,
+  `Mother_idMo` INT NOT NULL,
+  `Gabinete_idGabinete` INT NOT NULL,
+  `Fuente_idFuente` INT NOT NULL,
+  `PlacaDeVideo_idPlacaDe` INT NOT NULL,
+  PRIMARY KEY (`idComputadora`),
+  INDEX `fk_Computadora_Ram1_idx` (`Ram_idRa` ASC),
+  INDEX `fk_Computadora_Disco1_idx` (`Disco_idDisco` ASC),
+  INDEX `fk_Computadora_Cooler1_idx` (`Cooler_idCooler` ASC),
+  INDEX `fk_Computadora_Procesador1_idx` (`Procesador_idProcesador` ASC),
+  INDEX `fk_Computadora_Mother1_idx` (`Mother_idMo` ASC),
+  INDEX `fk_Computadora_Gabinete1_idx` (`Gabinete_idGabinete` ASC),
+  INDEX `fk_Computadora_Fuente1_idx` (`Fuente_idFuente` ASC),
+  INDEX `fk_Computadora_PlacaDeVideo1_idx` (`PlacaDeVideo_idPlacaDe` ASC),
+  CONSTRAINT `fk_Computadora_Ram1`
+    FOREIGN KEY (`Ram_idRa`)
+    REFERENCES `mydb`.`Ram` (`idRa`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Computadora_Disco1`
+    FOREIGN KEY (`Disco_idDisco`)
+    REFERENCES `mydb`.`Disco` (`idDisco`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Computadora_Cooler1`
+    FOREIGN KEY (`Cooler_idCooler`)
+    REFERENCES `mydb`.`Cooler` (`idCooler`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Computadora_Procesador1`
+    FOREIGN KEY (`Procesador_idProcesador`)
+    REFERENCES `mydb`.`Procesador` (`idProcesador`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Computadora_Mother1`
+    FOREIGN KEY (`Mother_idMo`)
+    REFERENCES `mydb`.`Mother` (`idMo`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Computadora_Gabinete1`
+    FOREIGN KEY (`Gabinete_idGabinete`)
+    REFERENCES `mydb`.`Gabinete` (`idGabinete`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Computadora_Fuente1`
+    FOREIGN KEY (`Fuente_idFuente`)
+    REFERENCES `mydb`.`Fuente` (`idFuente`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Computadora_PlacaDeVideo1`
+    FOREIGN KEY (`PlacaDeVideo_idPlacaDe`)
+    REFERENCES `mydb`.`PlacaDeVideo` (`idPlacaDe`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`FormaPago`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`FormaPago` (
+  `idFormaPago` INT NOT NULL AUTO_INCREMENT,
+  `efectivo/tarjeta` TINYINT(1) NULL,
+  `tarjeta` VARCHAR(45) NULL,
+  PRIMARY KEY (`idFormaPago`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Envio`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Envio` (
+  `idEnvio` INT NOT NULL AUTO_INCREMENT,
+  `direccion` VARCHAR(45) NULL,
+  `costo` DOUBLE NULL,
+  `localidad` VARCHAR(45) NULL,
+  `codigoPostal` INT NULL,
+  `retirosucursal` TINYINT(1) NOT NULL,
+  PRIMARY KEY (`idEnvio`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Compra`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Compra` (
+  `idCompra` INT NOT NULL AUTO_INCREMENT,
+  `precio` VARCHAR(45) NULL,
+  `FormaPago_idFormaPago` INT NOT NULL,
+  `Envio_idEnvio` INT NOT NULL,
+  `Usuario_dni` INT NOT NULL,
+  `Computadora_idComputadora` INT NOT NULL,
+  `metodoEnvio` INT NULL,
+  PRIMARY KEY (`idCompra`),
+  INDEX `fk_Compra_FormaPago1_idx` (`FormaPago_idFormaPago` ASC),
+  INDEX `fk_Compra_Envio1_idx` (`Envio_idEnvio` ASC),
+  INDEX `fk_Compra_Usuario1_idx` (`Usuario_dni` ASC),
+  INDEX `fk_Compra_Computadora1_idx` (`Computadora_idComputadora` ASC),
+  CONSTRAINT `fk_Compra_FormaPago1`
+    FOREIGN KEY (`FormaPago_idFormaPago`)
+    REFERENCES `mydb`.`FormaPago` (`idFormaPago`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Compra_Envio1`
+    FOREIGN KEY (`Envio_idEnvio`)
+    REFERENCES `mydb`.`Envio` (`idEnvio`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Compra_Usuario1`
+    FOREIGN KEY (`Usuario_dni`)
+    REFERENCES `mydb`.`Usuario` (`dni`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Compra_Computadora1`
+    FOREIGN KEY (`Computadora_idComputadora`)
+    REFERENCES `mydb`.`Computadora` (`idComputadora`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+

@@ -1,0 +1,54 @@
+ejercicios:
+
+1) crear clase Persona con los siguientes atributos:
+   nombre
+   edad
+   dni
+   telefono
+   dirección
+
+   Declarar e implementar 3 tipos de constructores:
+   Uno defecto por.
+   Uno con parámetro string.
+   Otro con los 5 parámetros correspondientes a todos los atributos.
+   Declarar e implementar los getter y setters.
+
+2) A la clase anterior, agregar lo siguientes métodos:
+   esMayorDeEdad
+   sonLaMismaPersona
+   tienenLaMismaEdad
+
+   Agregar dos métodos a elección.
+
+3) Crear la clase horario con los siguientes atributos:
+   hora, minutos y segundos.
+   
+   Un constructor que asigne hora, minutos y segundos por
+   parámetro.
+
+   Los getters y setters.
+
+   Un método que indique si un horario es menor a otro.
+   Un método que indique si dos horarios son iguales.
+
+4) Crear la clase Fecha con los atributos día, mes, año.
+
+   Crear el constructor por defecto.
+
+   Crear getters y setters.
+
+   Método que agrega días.
+   ej: public void agregoDias(int dias)
+   Método que agrega meses.
+   Método que agrega años.
+   Método que nos devuelve la cantidad de días de diferencia entre dos fechas.
+   Método que indique si dos fechas son distintas y si una fecha 
+   anterior a otra.
+
+5) Se necesita crear una clase cine para poder saber si dos cines son iguales, 
+   si su entrada es igual a $125, la cantidad de salas es igual a la cantidad de 
+   películas ofrecidas y si están ubicados en la misma zona.
+   Proponer e implementar los atributos y métodos necesarios.
+
+--- falta ejercicio 4 y 5
+

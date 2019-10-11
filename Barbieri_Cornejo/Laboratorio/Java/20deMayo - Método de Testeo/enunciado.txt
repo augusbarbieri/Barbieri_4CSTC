@@ -1,0 +1,64 @@
+
+----------------------------------------------------------------------------------
+
+Cómo conectar JUnit a Intellij?
+
+    Primero, crear una clase que será utilizada para escribir
+    los casos de test. Se sugiere llamarla "misTests".
+
+    Agregar las siguientes lineas antes de la clase:
+
+    import org.junit.jupiter.api.Test;
+    import static org.junit.jupiter.api.Assertions.*;
+    (el * indica que importaremos todas las clases de la carpeta "Assertions")
+
+    ir a Run -> Edit Configurations
+    Hacer click en "add new configuration".
+    Seleccionar JUnit.
+    Nombrar dicha configuración con el nombre "Tests".
+    Elegir la clase "misTest", creada con anteoridad.
+    Seleccionar "OK".
+
+---------------------------------------------------------------------------------
+
+Usar la herramienta JUnit para testear con los siguientes casos:
+
+En calculadora:
+	add con pila vacía
+	add con elemento cero en pila
+	add con tres elementos en pila
+
+	sub con pila vacia
+	sub con elemento cero en pila
+	sub con tres elementos negativos en pila
+	sub con tres elementos positivos en pila
+
+	mul con pila vacía
+	mul con elemento cero en pila
+	mul con tres elementos negativos en pila
+	mul con tres elementos positivos en pila
+
+	write con pila vacia
+	write con dos elementos
+
+	read con valor de variable inicializada a pila
+	read con valor de variable no inicializada a pila
+
+En las otras clases:
+	Chequear que se carguen bien la cantidad de rutinas que se agregan.
+	Chequear que se accede bien a cualquier rutina si es que se tienen varias
+	(colocar dos rutinas en el programa y verificar que la calculadora ejecute 
+	cada rutina por separado).
+
+	Chequear que se carguen bien la cantidad de instrucciones que se agregan.
+	Chequear que se las instrucciones se creen correctamente verificando
+	que los valores seteados (asignados) sean los correctos.
+
+----------------------------------------------------------------------------------
+
+	Pensar qué otras partes se podrían testear. 
+	El propósito es lograr detectar la mayor cantidad de errores que pueda
+	tener la calculadora.
+
+----------------------------------------------------------------------------------
+

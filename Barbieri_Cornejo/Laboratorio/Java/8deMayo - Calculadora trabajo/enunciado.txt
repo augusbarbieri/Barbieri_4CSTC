@@ -1,0 +1,78 @@
+﻿
+Crear una mini-calculadora programable.
+La calculadora se inicializa cargándole un programa.
+Cada programa contiene varias rutinas y cada rutina está asociada a un nombre
+y consta de una secuencia de instrucciones.
+La calculadora opera con una pila que almacena valores numéricos, y con una memoria en la que se pueden guardar variables identificadas por nombre.
+Los programas pueden utilizar seis distintos tipos de operaciones: cuatro operaciones aritméticas (push, add, sub, mul), dos operaciones de manejo de variables (read, write).
+
+Ejemplo:
+Rutina "A" contiene las instrucciones:
+	read(x)
+	push(2)
+	add
+	write(y)
+
+Rutina "B"
+	push(2)
+	read(x)
+	mul
+	write(x)
+	
+Operaciones aritméticas:
+
+INCLUIDA - PUSH(número), mete LA CONSTANTE NUMERICA INDICADA en la pila.
+
+	ADD, saca dos valores del tope de la pila, los suma y apila el 	resultado. En caso de que la pila se encuentre vacía, se toma 0 como valor por defecto. En caso 	de que haya sólo un valor, se deja tal cual está.
+
+	SUB, saca dos valores del tope de la pila, los resta y apila el resultado. El valor en el tope de la pila es el
+	sustraendo. Igual que para la suma, si la pila está vacía, el valor por defecto es 0.
+
+	MUL, saca dos valores del tope de la pila, los multiplica y apila el resultado. Al igual que antes, si la pila está vacía, el valor por defecto es 0.
+
+Operaciones de manejo de variables:
+
+	Las operaciones de manejo de variables permiten almacenar un valor en la memoria de la calculadora.
+
+	WRITE(variable), saca el valor del tope de la pila y lo guarda 	en la VARIABLE INDICADA. Si la pila está vacía, el valor por defecto es 0.
+
+ejemplo: 
+	la pila contiene sólo al valor 34
+	las variables presentes en la MEMORIA de la calculadora son
+	x con valor 12 (en el tope)
+	y con valor 45
+	se ejecuta la INSTRUCCION write(x)
+	entoncs ahora la PILA estará vacía porque el valor 34 se guardó
+	en la variable x y la MEMORIA pasará a tener los siguientes valores:
+	x von valor 34 (en el tope)
+	y con valor 45
+											  
+	READ(variable), mete en la pila - PUSH() -  el valor actual de la VARIABLE INDICADA. Si la variable no fue inicializada anteriormente, se considera que su valor por 	defecto es 0. () 
+
+ejemplo: 
+	la PILA se encuentra vacía
+	las variables de la calculadora, tiene a: 
+	x con valor 7 (en el tope)
+        y con valor 32
+	se ejecuta la instrucción read(y).
+	Entonces, la pila ahora contendrá el valor 32.
+
+-------------------------------------------------------------------
+
+Cómo se utilizaría la calculadora?
+
+Programa p = new Programa();
+p.agregarInstruccion("rutinaA", Instruccion(PUSH, 2));
+p.agregarInstruccion("rutinaA", Instruccion(ADD));
+p.agregarInstruccion("rutinaA", Instruccion(WRITE, "y"));
+p.agregarInstruccion("rutinaA", Instruccion(READ, "x"));
+
+p.agregarInstruccion("rutinaB", Instruccion(READ, "x"));
+p.agregarInstruccion("rutinaB", Instruccion(MUL));
+p.agregarInstruccion("rutinaB", Instruccion(WRITE, "x"));
+p.agregarInstruccion("rutinaB", Instruccion(PUSH, 2));
+
+Calculadora calc = new Calculadora();
+calc.cargarPrograma(p);
+calc.ejecutar("rutinaB");
+

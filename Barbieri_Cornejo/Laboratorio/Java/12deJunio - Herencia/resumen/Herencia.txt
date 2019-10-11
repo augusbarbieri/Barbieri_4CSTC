@@ -1,0 +1,87 @@
+Herencia
+
+resumen:
+	*) una subclase se crea mediante la palabra reservada extends
+
+	ej:
+	superClaseA{
+		...
+	}
+
+	subClaseDeA extends superClaseA{
+		...
+	}
+
+	*) super() sirve para llamar a constructores pertenecientes
+	a la superclase de una subclase. 
+	La elección del constructor a llamar se determina mediante la cantidad
+	y tipo de parámetros pasados.
+
+	caso a) Si la super clase no tiene constructores (java le provee un constructor
+	por defecto, por lo tanto, se pueden crear instancias de la misma) o tiene 
+	un constructor por defecto definido, no será necesario hacer el llamado al
+	constructor de la superclase en la subclase y se podrán crear instancias
+	del mismo (aún cuando la subclase tampoco tenga constructores).
+
+	caso b) Si la super tiene sólo constructores que tienen al menos algún
+	parámetro, será necesario hacer el llamado a alguno de ellos en cada constructor
+	definido en la subclase.
+
+	Si se tiene, por ejemplo
+
+	SuperClaseA{
+		private String a;
+		private int b;
+		private int c;
+
+		SuperClaseA(String a){
+			this.a = a;
+		}
+
+		SuperClaseA(int b, int c){
+			this.b = b;
+			this.c = c;
+		}
+	}
+
+	SubClaseDeA{
+		private double e;
+
+		SubClaseDeA(String a){
+			super(a);
+		}
+
+		SubClaseDeA(String a, double e){
+			super(a);
+			this.e = e;
+		}
+
+		SubClaseDeA(int a, int b, double e){
+			super(a,b);
+			this.e = e;
+		}
+
+		...
+	}
+
+	*) this() sirve para hacer llamados a constructores de una misma clase.
+
+	 ClaseA{
+	 	private int a;
+	 	private int b;
+
+	 	ClaseA(int a, int b){
+	 		this.a = a;
+	 		this.b = b;
+	 	}
+
+		ClaseA(){
+			this(a,b);
+	 	}
+
+	 	...
+	 }
+
+
+
+
