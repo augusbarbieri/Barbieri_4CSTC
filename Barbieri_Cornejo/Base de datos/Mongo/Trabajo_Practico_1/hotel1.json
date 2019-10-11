@@ -1,0 +1,55 @@
+db.hoteles.insertMany( 
+{
+"Nombre":"Red Hotel",
+"Informacion":{
+"Direccion":2156,	"Telefono":1540263200, "Numeros Internos":[], "Servicios":["5 Estrellas"]},
+"Comodidades":["Pileta","Camas"],
+"Promociones":["Ninguna"],
+"Mensajes":{"Resividos":[], 
+"Enviados":[]},
+"Puntos interesantes":[ 
+{"Nombre": "Jose","Direccion":"Ceretti" ,"Telefono": 12453546,"Horas Trabajo": 26,"Dias libres": 2,"Pagina Web": "www.epicgames.com" ,"Lugar": "Infierno"},
+{"Nombre": "Arthur","Direccion":"Nahuel" ,"Telefono": 12453545,"Horas Trabajo": 25,"Dias libres": 1,"Pagina Web": "www.epicgames.com" ,"Lugar": "Infierno"},
+{"Nombre": "Michael","Direccion":"Constituyentes","Telefono": 12453547,"Horas Trabajo": 30,"Dias libres": 7,"Pagina Web": "www.epicgames.com" ,"Lugar": "Infierno"},
+{"Nombre": "Augusto","Direccion":"Olazabal" ,"Telefono": 12433546,"Horas Trabajo": 40,"Dias libres": 3,"Pagina Web": "www.epicgames.com" ,"Lugar": "Infierno"}],
+"Descuentos":[{"Tipo":"Cobre","descuento":25},{"Tipo":"Oro","descuento":50},{"Tipo":"Diamante","descuento":70}],
+"Telefonos Utiles":[{"Nombre":"Laura","Telefono": 1540263228 },{"Nombre":"Marines","Telefono": 911 },{"Nombre":"Inadi","Telefono": 144 },{"Nombre":"Guardia Costera","Telefono": 311 },{"Nombre":"Mama del dueño","Telefono": 711 }]
+}
+,
+{
+"Nombre":"Black Hotel",
+"Informacion":{
+"Direccion":2331,"Telefono":1540263010, "Numeros Internos":[], "Servicios":["2 Estrellas"]},
+"Comodidades":["Pileta","Camas"],
+"Promociones":["2x1","2x4"],
+"Mensajes":{"Resividos":[], "Enviados":[]},
+"Puntos interesantes":[ 
+{"Nombre": "Jose","Direccion":"Ceretti" ,"Telefono": 11453546,"Horas Trabajo": 26,"Dias libres": 2,"Pagina Web": "www.epicañsdjkgames.com" ,"Lugar": "Infierno"},{"Nombre": "Arthur","Direccion":"Nahuel" ,"Telefono": 15453545,"Horas Trabajo": 25,"Dias libres": 1,"Pagina Web": "www.epicges.com" ,"Lugar": "Infierno 2"},{"Nombre": "Walter","Direccion":"Constituyentes","Telefono": 12413547,"Horas Trabajo": 30,"Dias libres": 7,"Pagina Web": "www.gamespot.com" ,"Lugar": "Infierno 3"},{"Nombre": "Alexia","Direccion":"Olazabal" ,"Telefono": 12433446,"Horas Trabajo": 40,"Dias libres": 3,"Pagina Web": "www.epics.com" ,"Lugar": "Infierno 4"}],
+"Descuentos":[{"Tipo":"Cobre","descuento":25},{"Tipo":"Oro","descuento":50},{"Tipo":"Diamante","descuento":70}],	
+"Telefonos Utiles":[{"Nombre":"Laura","Telefono": 1540265228 },{"Nombre":"Marines","Telefono": 911 },{"Nombre":"Inadi","Telefono": 144 },{"Nombre":"Guardia Costera","Telefono": 311 },
+{"Nombre":"Mama del dueño","Telefono": 7121361651 }]
+},
+{
+"Nombre":"White Hotel",
+"Informacion":{
+"Direccion":126456,	"Telefono":51561561561, "Numeros Internos":[], "Servicios":["1 Estrellas"]},
+"Comodidades":["Pileta","Camas"],
+"Promociones":["Ninguna"],
+"Mensajes":{"Resividos":[], "Enviados":[]},
+"Puntos interesantes":[ {"Nombre": "Valu","Direccion":"Ceretti" ,"Telefono": 561561264,"Horas Trabajo": 26,"Dias libres": 2,"Pagina Web": "www.efsnhfhames.com" ,"Lugar": "Infierno"},{"Nombre": "Condesin","Direccion":"Nahuel" ,"Telefono": 48481146165,"Horas Trabajo": 25,"Dias libres": 1,"Pagina Web": "www.epshshes.com" ,"Lugar": "Cielo"},{"Nombre": "Vector","Direccion":"Constituyentes","Telefono": 626165465459,"Horas Trabajo": 30,"Dias libres": 7,"Pagina Web": "www.epistfhmes.com" ,"Lugar": "Rossas house"},{"Nombre": "Mordekeisser","Direccion":"Olazabal" ,"Telefono": 1651848954,"Horas Trabajo": 40,"Dias libres": 3,"Pagina Web": "www.epidthmes.com" ,"Lugar": "In or out"}],
+"Descuentos":[{"Tipo":"Cobre","descuento":25},{"Tipo":"Oro","descuento":50},{"Tipo":"Diamante","descuento":70}],
+"Telefonos Utiles":[{"Nombre":"Laura","Telefono": 1548456498 },{"Nombre":"Marines","Telefono": 911 },{"Nombre":"Inadi","Telefono": 144 },{"Nombre":"Guardia Costera","Telefono": 311 },					
+{"Nombre":"Mama del dueño","Telefono": 71545416943 }]
+},
+{
+"Nombre":"Green Hotel",
+"Informacion":{
+"Direccion":2261654896,	"Telefono":1540153200, "Numeros Internos":[], "Servicios":["5 Estrellas"]},
+"Comodidades":["Pileta","Camas"],
+"Promociones":["Ninguna"],
+"Mensajes":{"Resividos":[], "Enviados":[]},
+"Puntos interesantes":[ {"Nombre": "Apo capo","Direccion":"Ceretti" ,"Telefono": 12618941546,"Horas Trabajo": 26,"Dias libres": 2,"Pagina Web": "www.efdhfames.com" ,"Lugar": "Infierno"},{"Nombre": "Ex of Exs","Direccion":"Nahuel" ,"Telefono": 12115110145,"Horas Trabajo": 25,"Dias libres": 1,"Pagina Web": "www.epicsths.com" ,"Lugar": "Cielo 2"},{"Nombre": "Miel","Direccion":"Constituyentes","Telefono": 1651516517,"Horas Trabajo": 30,"Dias libres": 7,"Pagina Web": "www.evcbbvames.com" ,"Lugar": "Lux"},{"Nombre": "Jasou","Direccion":"Olazabal" ,"Telefono": 1619814653546,"Horas Trabajo": 40,"Dias libres": 3,"Pagina Web": "www.epicrdstames.com" ,"Lugar": "limbo"}],
+"Descuentos":[{"Tipo":"Cobre","descuento":25},{"Tipo":"Oro","descuento":50},{"Tipo":"Diamante","descuento":70}],
+"Telefonos Utiles":[{"Nombre":"Laura","Telefono": 1545165128 },{"Nombre":"Marines","Telefono": 911 },{"Nombre":"Inadi","Telefono": 144 },{"Nombre":"Guardia Costera","Telefono": 311 },{"Nombre":"Mama del dueño","Telefono": 77878971 }]
+}
+)
