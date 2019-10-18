@@ -42,6 +42,14 @@ body {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+#carrusel{
+	position: absolute;
+	margin-top: 1cm;
+	top: 7cm;
+}
+#slider{
+    margin-top: 2cm;
+}
 
 
 
