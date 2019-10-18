@@ -12,15 +12,15 @@ db.hoteles.count();
 
 7)
 
-db.hoteles.find().sort(Nombre,1)
+db.hoteles.find({}, {Nombre:1}).sort({Nombre:1})
 
 8)
 
-db.hoteles.find().sort(Nombre,-1)
+db.hoteles.find({}, {Nombre:1}).sort({Nombre:-1})
 
 9)
 
-db.hoteles.find().sort(Comodidades: Spa)
+db.hoteles.find().{Nombre:1}).sort({Comodidades: Spa})
 
 10)
 

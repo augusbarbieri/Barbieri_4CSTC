@@ -1,38 +1,25 @@
-
-[ 
-{
+db.hoteles.insertOne({
 "Nombre":"Green Hotel",
-
 "Informacion":{
-	"Direccion":2261654896,	"Telefono":1540153200, "Numeros Internos":[], "Servicios":["5 Estrellas"]},
-
-	"Comodidades":["Pileta","Camas"],
-
-	"Promociones":["Ninguna"],
-
-	"Mensajes":{"Resividos":[], "Enviados":[]},
-
-	"Puntos interesantes":[ 
-		{"Nombre": "Apo capo","Direccion":"Ceretti" ,"Telefono": 12618941546,"Horas Trabajo": 26,"Dias libres": 2,"Pagina Web": "www.efdhfames.com" ,"Lugar": "Infierno"},
-		{"Nombre": "Ex of Exs","Direccion":"Nahuel" ,"Telefono": 12115110145,"Horas Trabajo": 25,"Dias libres": 1,"Pagina Web": "www.epicsths.com" ,"Lugar": "Cielo 2"},
-		{"Nombre": "Miel","Direccion":"Constituyentes","Telefono": 1651516517,"Horas Trabajo": 30,"Dias libres": 7,"Pagina Web": "www.evcbbvames.com" ,"Lugar": "Lux"},
-		{"Nombre": "Jasou","Direccion":"Olazabal" ,"Telefono": 1619814653546,"Horas Trabajo": 40,"Dias libres": 3,"Pagina Web": "www.epicrdstames.com" ,"Lugar": "limbo"}],
-
-	"Descuentos":[
-				{"Tipo":"Cobre","descuento":25},
-				{"Tipo":"Oro","descuento":50},
-				{"Tipo":"Diamante","descuento":70}],
-
-	
-
-	"Telefonos Utiles":[
-						{"Nombre":"Laura","Telefono": 1545165128 },
-						{"Nombre":"Marines","Telefono": 911 },
-						{"Nombre":"Inadi","Telefono": 144 },
-						{"Nombre":"Guardia Costera","Telefono": 311 },
-						{"Nombre":"Policia","Telefono": 911 },
-						{"Nombre":"Mama del dueño","Telefono": 77878971 }]
-
-}
- 
-]
+"Direccion":2261654896,	"Telefono":1540153200, "Numeros Internos":[], "Servicios":["5 Estrellas"]},
+"Comodidades":["Pileta","Camas"],
+"Promociones":["Ninguna"],
+"Mensajes":{"Resividos":[], 
+"Enviados":[]},
+"Puntos interesantes":[ 
+{"Nombre": "Apo capo","Direccion":"Ceretti" ,"Telefono": 12618941546,"Horas Trabajo": 26,"Dias libres": 2,"Pagina Web": "www.efdhfames.com" ,"Lugar": "Infierno"},
+{"Nombre": "Ex of Exs","Direccion":"Nahuel" ,"Telefono": 12115110145,"Horas Trabajo": 25,"Dias libres": 1,"Pagina Web": "www.epicsths.com" ,"Lugar": "Cielo 2"},
+{"Nombre": "Miel","Direccion":"Constituyentes","Telefono": 1651516517,"Horas Trabajo": 30,"Dias libres": 7,"Pagina Web": "www.evcbbvames.com" ,"Lugar": "Lux"},
+{"Nombre": "Jasou","Direccion":"Olazabal" ,"Telefono": 1619814653546,"Horas Trabajo": 40,"Dias libres": 3,"Pagina Web": "www.epicrdstames.com" ,"Lugar": "limbo"}],
+"Descuentos":[
+{"Tipo":"Cobre","descuento":25},
+{"Tipo":"Oro","descuento":50},
+{"Tipo":"Diamante","descuento":70}],
+"Telefonos Utiles":[
+{"Nombre":"Laura","Telefono": 1545165128 },
+{"Nombre":"Marines","Telefono": 911 },
+{"Nombre":"Inadi","Telefono": 144 },
+{"Nombre":"Guardia Costera","Telefono": 311 },
+{"Nombre":"Policia","Telefono": 911 },
+{"Nombre":"Mama del dueño","Telefono": 77878971 }]
+})

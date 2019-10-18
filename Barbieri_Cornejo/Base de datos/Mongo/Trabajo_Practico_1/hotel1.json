@@ -13,6 +13,7 @@ db.hoteles.insertMany({
 {"Nombre": "Augusto","Direccion":"Olazabal" ,"Telefono": 12433546,"Horas Trabajo": 40,"Dias libres": 3,"Pagina Web": "www.epicgames.com" ,"Lugar": "Infierno"}],
 "Descuentos":[{"Tipo":"Cobre","descuento":25},{"Tipo":"Oro","descuento":50},{"Tipo":"Jubilado","descuento":50},{"Tipo":"Diamante","descuento":70}],
 "Telefonos Utiles":[{"Nombre":"Laura","Telefono": 1540263228 },{"Nombre":"Marines","Telefono": 911 },{"Nombre":"Inadi","Telefono": 144 },{"Nombre":"Guardia Costera","Telefono": 311 },{"Nombre":"Mama del dueño","Telefono": 711 }]},{
+
 "Nombre":"Black Hotel",
 "Informacion":{
 "Direccion":2331,"Telefono":1540263010, "Numeros Internos":[], "Servicios":["2 Estrellas"]},
@@ -33,6 +34,7 @@ db.hoteles.insertMany({
 "Puntos interesantes":[ {"Nombre": "Valu","Direccion":"Ceretti" ,"Telefono": 561561264,"Horas Trabajo": 26,"Dias libres": 2,"Pagina Web": "www.efsnhfhames.com" ,"Lugar": "Infierno"},{"Nombre": "Condesin","Direccion":"Nahuel" ,"Telefono": 48481146165,"Horas Trabajo": 25,"Dias libres": 1,"Pagina Web": "www.epshshes.com" ,"Lugar": "Cielo"},{"Nombre": "Vector","Direccion":"Constituyentes","Telefono": 626165465459,"Horas Trabajo": 30,"Dias libres": 7,"Pagina Web": "www.epistfhmes.com" ,"Lugar": "Rossas house"},{"Nombre": "Mordekeisser","Direccion":"Olazabal" ,"Telefono": 1651848954,"Horas Trabajo": 40,"Dias libres": 3,"Pagina Web": "www.epidthmes.com" ,"Lugar": "In or out"}],
 "Descuentos":[{"Tipo":"Cobre","descuento":25},{"Tipo":"Oro","descuento":50},{"Tipo":"Diamante","descuento":70}],
 "Telefonos Utiles":[{"Nombre":"Laura","Telefono": 1548456498 },{"Nombre":"Marines","Telefono": 911 },{"Nombre":"Inadi","Telefono": 144 },{"Nombre":"Guardia Costera","Telefono": 311 },					{"Nombre":"Mama del dueño","Telefono": 71545416943 }]},{
+
 "Nombre":"Green Hotel",
 "Informacion":{
 "Direccion":2261654896,	"Telefono":1540153200, "Numeros Internos":[], "Servicios":["5 Estrellas"]},

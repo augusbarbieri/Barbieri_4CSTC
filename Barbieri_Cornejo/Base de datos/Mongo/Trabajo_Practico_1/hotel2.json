@@ -1,10 +1,16 @@
 db.hoteles.insertOne({ 
 "Nombre":"Black Hotel",
-"Informacion":{"Direccion":2331,	"Telefono":1540263010, "Numeros Internos":[], "Servicios":["2 Estrellas"]},
+"Informacion":{
+"Direccion":2331,	"Telefono":1540263010, "Numeros Internos":[], "Servicios":["2 Estrellas"]},
 "Comodidades":["Pileta","Camas"],
 "Promociones":["2x1","2x4"],
-"Mensajes":{"Resividos":[], "Enviados":[]},
-"Puntos interesantes":[ {"Nombre": "Jose","Direccion":"Ceretti" ,"Telefono": 11453546,"Horas Trabajo": 26,"Dias libres": 2,"Pagina Web": "www.epicañsdjkgames.com" ,"Lugar": "Infierno"},{"Nombre": "Arthur","Direccion":"Nahuel" ,"Telefono": 15453545,"Horas Trabajo": 25,"Dias libres": 1,"Pagina Web": "www.epicges.com" ,"Lugar": "Infierno 2"},{"Nombre": "Walter","Direccion":"Constituyentes","Telefono": 12413547,"Horas Trabajo": 30,"Dias libres": 7,"Pagina Web": "www.gamespot.com" ,"Lugar": "Infierno 3"},{"Nombre": "MALBA","Direccion":"Olazabal" ,"Telefono": 12433446,"Horas Trabajo": 40,"Dias libres": 3,"Pagina Web": "www.epics.com" ,"Lugar": "Infierno 4"}],
+"Mensajes":{"Resividos":[], 
+"Enviados":[]},
+"Puntos interesantes":[ 
+{"Nombre": "Jose","Direccion":"Ceretti" ,"Telefono": 11453546,"Horas Trabajo": 26,"Dias libres": 2,"Pagina Web": "www.epicañsdjkgames.com" ,"Lugar": "Infierno"},
+{"Nombre": "Arthur","Direccion":"Nahuel" ,"Telefono": 15453545,"Horas Trabajo": 25,"Dias libres": 1,"Pagina Web": "www.epicges.com" ,"Lugar": "Infierno 2"},
+{"Nombre": "Walter","Direccion":"Constituyentes","Telefono": 12413547,"Horas Trabajo": 30,"Dias libres": 7,"Pagina Web": "www.gamespot.com" ,"Lugar": "Infierno 3"},
+{"Nombre": "MALBA","Direccion":"Olazabal" ,"Telefono": 12433446,"Horas Trabajo": 40,"Dias libres": 3,"Pagina Web": "www.epics.com" ,"Lugar": "Infierno 4"}],
 "Descuentos":[
 {"Tipo":"Cobre","descuento":25},
 {"Tipo":"Oro","descuento":50},
@@ -15,9 +21,7 @@ db.hoteles.insertOne({
 {"Nombre":"Inadi","Telefono": 144 },
 {"Nombre":"Guardia Costera","Telefono": 311 },
 {"Nombre":"Mama del dueño","Telefono": 7121361651 }]
-
-
- })
+})
  
  
 
