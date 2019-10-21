@@ -1,58 +1,153 @@
-4)
+4)Funciona
 
 db.hoteles.find();
+
 
 5)
 
 
 
-6)
+6)Funciona
 
 db.hoteles.count();
 
-7)
+
+7)Funciona
 
 db.hoteles.find({}, {Nombre:1}).sort({Nombre:1})
 
-8)
 
-db.hoteles.find({}, {Nombre:1}).sort({Nombre:-1})
+8)Funciona
 
-9)
+db.hoteles.find({},{Nombre:1}).sort({Nombre:-1})
 
-db.hoteles.find().{Nombre:1}).sort({Comodidades: Spa})
 
-10)
+9)Funciona
 
-db.hoteles.find().sort(Promociones: 10%)
+db.hoteles.find({"Comodidades":{$in:["Spa"]} },{"Nombre":1}).sort({"Nombre":1})
 
-11)
 
-db.hoteles.find().sort(Descuento: Tipo: Jubilado)
+10)Funciona
+
+db.hoteles.find({"Promociones":{$in:["10%"]} },{"Nombre":1}).sort({"Nombre":1})
+
+
+11)Funciona?
+
+db.hoteles.find({"Descuento":{$in:["Jubilado"]} },{"Nombre":1}).sort({"Nombre":1})
+
 
 12)
 
-db.hoteles.Telefonos Utiles.updateOne(
-      { "Nombre" : "Policia" },
-      { "Telefono" : "911" },
-      { $set: { "Telefono" : "0800-222" } }
-   );
+db.hoteles.updateOne({"Nombre":{$in:["Policia"]},{"Telefono":{$in:["911"]},{$set:{"Telefono":"0800-222"} });
+
 
 13)
 
- db.hoteles.Puntos de Interes.find(
-    {"Nombre": "MALBA"}
-  		).pretty()
+db.hoteles.find({"Nombre": {$in:["MALBA"]}}).pretty()
 
-14)
+
+14) Funciona
 
 db.hoteles.find().limit(2);
 
-15)
 
- db.hoteles.Descuentos.find(
-    {"Nombre": }
-  		).pretty()
+15)Funciona
+
+db.hoteles.find().sort({"Descuento":-1}).limit(1) 
+
+
+16)Funciona
+
+db.hoteles.find().sort({"Descuento":+1}).limit(1)
+
+
+17)Funciona
+
+find() utilizando los siguientes operadores de $gte - greater than equal - mayor o igual que, $in(array)- in - dentro de, $nin(array)- not in - no dentro de, $ne- not equal - distinto.
+
+db.hoteles.find({Direccion:{$gte:40}})
+
+db.hoteles.find({Comodidades:{$in:["Spa"]}})
+
+db.hoteles.find({Comodidades:{$nin:["Camas"]}})
+
+db.hoteles.find({Direccion:{$ne:50}})
+
+
+18) No terminado
+
+find() utilizando los operadores de lógicos $not, $nor, $or.
+
+
+db.hoteles.find({Promociones:{$not:{$gt:"2x1"}}})
+
+db.hoteles.find( { $nor: [ { Promocion: "2x4" }, { qty: { $lt: 20 } }, { sale: true } ] } )
+
+db.hoteles.find( { $or: [ { quantity: { $lt: 20 } }, { price: 10 } ] } )
+
+
+19)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

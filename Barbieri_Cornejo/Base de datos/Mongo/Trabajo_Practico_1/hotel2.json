@@ -3,7 +3,7 @@ db.hoteles.insertOne({
 "Informacion":{
 "Direccion":2331,	"Telefono":1540263010, "Numeros Internos":[], "Servicios":["2 Estrellas"]},
 "Comodidades":["Pileta","Camas"],
-"Promociones":["2x1","2x4"],
+"Promociones":["2x1","2x4","10%"],
 "Mensajes":{"Resividos":[], 
 "Enviados":[]},
 "Puntos interesantes":[ 
@@ -14,6 +14,7 @@ db.hoteles.insertOne({
 "Descuentos":[
 {"Tipo":"Cobre","descuento":25},
 {"Tipo":"Oro","descuento":50},
+{"Tipo":"Jubilado","descuento":50},
 {"Tipo":"Diamante","descuento":70}],
 "Telefonos Utiles":[
 {"Nombre":"Laura","Telefono": 1540265228 },
