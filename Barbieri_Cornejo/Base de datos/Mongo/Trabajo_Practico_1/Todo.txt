@@ -1,3 +1,11 @@
+
+Primer parametro: condicion
+segundo parametro: lo que quiero mostrar 
+Separados por coma
+
+NO PONER NOMBRES IGUALESS
+
+
 4)Funciona
 
 db.hoteles.find();
@@ -39,40 +47,41 @@ db.hoteles.find({"Descuento":{$in:["Jubilado"]} },{"Nombre":1}).sort({"Nombre":1
 
 12)
 
-db.hoteles.updateOne({"Nombre":{$in:["Policia"]},{"Telefono":{$in:["911"]},{$set:{"Telefono":"0800-222"} });
+db.hoteles.updateMany({"Nombre":{$in:["Policia"]},{"Telefono":{$in:["911"]},{$set:{"Telefono":"0800-222"} });
 
 
-13)
+13)Funciona
 
-db.hoteles.find({"Nombre": {$in:["MALBA"]}}).pretty()
+db.hoteles.find({"Nombre": {$in:["MALBA"]}},{"Nombre":1}).pretty()
 
 
 14) Funciona
 
-db.hoteles.find().limit(2);
+db.hoteles.find({"Nombre":1}).limit(2);
 
 
 15)Funciona
 
-db.hoteles.find().sort({"Descuento":-1}).limit(1) 
+db.hoteles.find({"Nombre":1}).sort({"Descuento":-1}).limit(1) 
 
 
 16)Funciona
 
-db.hoteles.find().sort({"Descuento":+1}).limit(1)
+db.hoteles.find({"Nombre":1}).sort({"Descuento":+1}).limit(1)
 
 
 17)Funciona
 
-find() utilizando los siguientes operadores de $gte - greater than equal - mayor o igual que, $in(array)- in - dentro de, $nin(array)- not in - no dentro de, $ne- not equal - distinto.
+find() utilizando los siguientes operadores de $gte - greater than equal - mayor o igual que, $in(array)- in - 
+dentro de, $nin(array)- not in - no dentro de, $ne- not equal - distinto.
 
-db.hoteles.find({Direccion:{$gte:40}})
+db.hoteles.find({Direccion:{$gte:40}},{"Nombre":1})
 
-db.hoteles.find({Comodidades:{$in:["Spa"]}})
+db.hoteles.find({Comodidades:{$in:["Spa"]}},{"Nombre":1})
 
-db.hoteles.find({Comodidades:{$nin:["Camas"]}})
+db.hoteles.find({Comodidades:{$nin:["Camas"]}},{"Nombre":1})
 
-db.hoteles.find({Direccion:{$ne:50}})
+db.hoteles.find({Direccion:{$ne:50}},{"Nombre":1})
 
 
 18) No terminado
@@ -87,64 +96,54 @@ db.hoteles.find( { $nor: [ { Promocion: "2x4" }, { qty: { $lt: 20 } }, { sale: t
 db.hoteles.find( { $or: [ { quantity: { $lt: 20 } }, { price: 10 } ] } )
 
 
-19)
+19)Funciona
+
+db.hoteles.find({Promociones:{$exists:false}},{"Nombre":1}).sort({"Nombre":1})   No se
+
+db.hoteles.find({Promociones: {$ne: null}}) Nop
+
+db.hoteles.find({Promociones: null},{"Nombre":1}) Sape sape
+
+
+20)
+
+db.survey.find(
+   { results: { $elemMatch: { product: "xyz", score: { $gte: 8 } } } }
+)
 
 
 
 
+21)
 
 
 
 
+22)
+
+remove
+deletemany
+
+
+23)
+
+max
+min
 
 
 
+24)
+
+updateMANY
+pop
+push
+pull
 
 
+25)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export 
+import
 
 
 

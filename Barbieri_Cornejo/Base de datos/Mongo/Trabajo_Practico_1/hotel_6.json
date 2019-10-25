@@ -1,0 +1,9 @@
+db.hoteles.insertOne({ 
+"Nombre":"Sape_3",
+"Promociones":[null],
+"Puntos interesantes":[ 
+{"Nombre": "Apo capo","Direccion":"Ceretti" ,"Telefono": 12618941546,"Horas Trabajo": 26,"Dias libres": 2,"Pagina Web": "www.efdhfames.com" ,"Lugar": "Infierno"}
+
+
+})
+ 
