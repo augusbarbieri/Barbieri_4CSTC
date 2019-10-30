@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3198209-b435-45f6-8044-417742baa90a" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +16,11 @@
     </option>
   </component>
   <component name="ProjectId" id="1PkZKtpNfVIA5X4L1sB8NXroNPE" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
@@ -40,18 +44,6 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/Ejercicio_6" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="JUnit.Tests.testDniMenor">
     <configuration name="TestsEj6" type="JUnit" factoryName="JUnit">
@@ -115,9 +107,9 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.TestsEj6" />
-      <item itemvalue="JUnit.Tests.testMayorDeEdad" />
-      <item itemvalue="JUnit.Tests.testLetraA" />
       <item itemvalue="JUnit.Tests.testDniMenor" />
+      <item itemvalue="JUnit.Tests.testLetraA" />
+      <item itemvalue="JUnit.Tests.testMayorDeEdad" />
     </list>
     <recent_temporary>
       <list>
@@ -139,5 +131,11 @@
       <updated>1566419993290</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="376" y="198" key="com.intellij.ide.util.TipDialog" timestamp="1572433584452">
+      <screen x="0" y="0" width="1366" height="741" />
+    </state>
+    <state x="376" y="198" key="com.intellij.ide.util.TipDialog/0.0.1366.741@0.0.1366.741" timestamp="1572433584452" />
   </component>
 </project>

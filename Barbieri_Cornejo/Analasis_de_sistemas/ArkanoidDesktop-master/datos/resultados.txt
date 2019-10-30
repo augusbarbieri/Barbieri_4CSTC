@@ -1,0 +1,10 @@
+GG 68090
+lilo 65498
+lilo 64570
+lilo 63010
+lilo 62580
+lilo 61970
+lilo 61040
+lilo 60830
+lilo 60500
+lilo 58560
