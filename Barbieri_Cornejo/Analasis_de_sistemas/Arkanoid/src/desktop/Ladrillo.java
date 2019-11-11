@@ -240,6 +240,21 @@ public class Ladrillo extends Actor{
 		}else if(i==2){
 			setNombreSprite("ladrilloazul.gif");
 			setValor(10);
+		}else if(i==3){
+			setNombreSprite("ladrilloamarillo.gif");
+			setValor(20);
+		}else if(i==4){
+			setNombreSprite("ladrillomorado.gif");
+			setValor(50);
+		}else if(i==5){
+			setNombreSprite("ladrillonaranja.gif");
+			setValor(100);
+		}else if(i==6){
+			setNombreSprite("ladrillorojo.gif");
+			setValor(150);
+		}else if(i==7){
+			setNombreSprite("ladrilloverde.gif");
+			setValor(200);
 		}else System.out.println("Error de color!");
 		
 		actualizarPuntos();

@@ -573,6 +573,7 @@ public class Arkanoid extends Canvas implements Stage, KeyListener, MouseListene
 		 */
 		if (tiempoDeDuracion > 0){
 			g.drawString(String.valueOf(1000/tiempoDeDuracion)+" fps",segundacolumna,segundalinea);
+			// Thread.sleep(2000);
 		}else{
 			g.drawString("--- fps",segundacolumna,segundalinea); //Lo pintamos dentro del rectangulo en el sitio deseado
 		}
@@ -966,10 +967,7 @@ public class Arkanoid extends Canvas implements Stage, KeyListener, MouseListene
 			
 			}
 
-			/*
-			 * Hacemos el calculo del tiempo que hemos tardado en refrescar la pantalla
-			 */
-			tiempoDeDuracion = System.currentTimeMillis()-empezarCronometro;
+
 
 			/*
 			 * Hacemos una pausa segun la velocidad a la que queremos que vaya
@@ -977,6 +975,13 @@ public class Arkanoid extends Canvas implements Stage, KeyListener, MouseListene
 			try { 
 				Thread.sleep(SPEED);
 			} catch (InterruptedException e) {}
+
+			/*
+			 * Hacemos el calculo del tiempo que hemos tardado en refrescar la pantalla
+			 */
+
+			tiempoDeDuracion = System.currentTimeMillis()-empezarCronometro;
+
 
 			/*
 			 * Si no estamos en jugar que acabe el juego
