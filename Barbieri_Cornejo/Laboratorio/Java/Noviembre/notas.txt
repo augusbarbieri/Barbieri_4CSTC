@@ -1,0 +1,15 @@
+
+ABM ¿Qué significa?
+
+   A: Alta (ingreso) de registros en una tabla.
+   B: Baja (eliminación) de registros en una tabla.
+   M: Modificación de registros en una tabla.
+
+Se refiere al sistema mediante el cual las aplicaciones de bases de datos se mantienen actualizadas.
+
+Estos sistemas de ABM no solo aparecen en los sistemas de escritorio, sino que también
+se hacen necesarios en los sitios web como puede ser por ejemplo, para agregar,
+modificar y borrar.
+
+Los sistemas ABM suelen colocarse en un directorio sin acceso al resto de los usuarios,
+en general protegido con un nombre de usuario y una contraseña.

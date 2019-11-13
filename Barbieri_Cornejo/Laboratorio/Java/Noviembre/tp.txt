@@ -1,0 +1,146 @@
+Los siguientes ejercicios fueron tomados por Pruscino en instancias de evaluación (algunas integradoras).
+Realizar el código necesario para resolver los siguientes items sin usar una base de datos.
+Realizar el testing correspondiente.
+
+1)
+
+Realizar un ABM de mascotas.
+(ver archivo notas.txt)
+
+ Los mismos pueden ser:
+
+	Perros
+	Gatos
+	Pajaritos
+  Peces
+
+Todas las mascotas tienen un nombre y un dueño (el nombre de la mascota debe ser único).
+Cada una tiene un saludo en particular:
+
+	Para los perros el saludo es “guau”
+	Para los gatos el saludo es “miau”
+	Para los pajaritos el saludo es “pio”
+
+Los pajaritos tienen un característica adicional, pueden ser o no cantores.
+Si son cantores hay que especificar cual es su canto (diferente de “pio”).
+
+Se debe poder realizar un alta de mascotas donde se indique el nombre, dueño y tipo.
+También se deben poder eliminar mascotas y modificar mascotas.
+
+Dentro del menú de la aplicación debe existir la opción “Saludar”,
+la misma solicita el nombre al usuario y el nombre de la mascota.
+
+El programa debe responder:
+
+Si el usuario es el dueño de la mascota: se saluda con el saludo de la mascota (por ejemplo: guau)
+Si el usuario no es el dueño de la mascota: se saluda con el saludo de la mascota en mayúsculas
+y con un signo de exclamación (por ejemplo: GUAU!)
+
+En el caso de los pajaritos la situación cambia, si el usuario no es el dueño no debe responder nada.
+
+Los peces no tienen saludo, pero cada vez que los saluda el dueño
+pierden una vida, de lo contrario, si los saluda un NO dueño mueren.
+
+Para sumar vidas deben alimentarse mediante el método alimentar, cada vez que se llama a dicho
+método se suma una vida.
+
+Si el pez se queda sin vida se debe eliminar automáticamente del listado de mascotas.
+
+Vidas iniciales de cada pez: 10
+
+Para los perros, gatos y pajaritos también existe un método alimentar.
+Ese método suma alegría a la mascota. Por cada punto de alegría que tenga la mascota el saludo se prolonga.
+Por ejemplo, para un gato que tiene 3 puntos de alegría el saludo es “miau miau miau”.
+
+En los casos donde la alegría es mayor a 1 al saludar se resta un punto de alegría. Por ejemplo:
+
+	Un gato tiene 3 puntos de alegría.
+	Saluda una vez con “miau miau miau” y se le resta 1 a su alegría quedando en 2.
+	Saluda nuevamente, esta vez con “miau miau” y se le resta 1 a su alegría quedando en 1.
+	Saluda nuevamente, esta vez con “miau” pero como su alegría ya estaba en 1 no se modifica.
+
+Cada tipo de mascota debe tener un método el cual devuelve qué tipo de mascota es (Perro, Gato, Pajarito o Pez).
+
+2)
+
+Realizar un sistema de control de mascotas para una veterinaria.
+
+La veterinaria tiene una lista de mascotas. Cada mascota debe tener un nombre,
+una fecha de nacimiento y un dueño. Las mascotas pueden ser perros, gatos y tortugas.
+Para los perros y los gatos hace falta saber su raza.
+
+Cada mascota tendrá una lista de fechas en los que fue a controlarse al veterinario.
+
+Para:
+	Los perros: se debe asistir al veterinario mínimo 4 veces al año.
+	Los gatos: se debe asistir al veterinario mínimo 2 veces al año.
+	Las tortugas: se debe asistir al veterinario mínimo 1 vez al año.
+
+Confeccionar los métodos correspondientes para:
+
+	Conocer si una mascota cumple con las visitas obligatorias al veterinario del año actual.
+	Conocer si una mascota tiene asistencia perfecta al veterinario desde el momento que nació.
+	Listar las razas de perros que no hayan cumplido con la asistencia mínima del año actual.
+	Conocer qué tipo de mascota (perro, gato o tortuga) tuvo mejor asistencia en el año actual.
+
+3)
+
+Realizar un sistema para gestionar el uso del proyector en el colegio. Las reservas se
+van a realizar para una fecha en particular y un bloque horario en particular
+(los bloques pueden ir de 1 a 6), por ejemplo se podría reservar el proyector para el día
+27/11/2018 en el bloque 6 (última hora).
+
+Las reservas las podrán realizar profesores o alumnos, de ambos se necesitarán: nombre,
+apellido y dni. Los profesores tienen asignada una prioridad del 1 al 10 (1 menos prioritario,
+10 más prioritario).
+
+Cuando se realiza la reserva pueden surgir las siguientes situaciones:
+
+	El horario a reservar está disponible y la reserva queda efectuada.
+
+	El horario no está disponible y la persona que está reservando tiene menos prioridad que
+  la que hizo la reserva anteriormente. En este caso el sistema no permite reservar
+
+	El horario no está disponible pero la persona que está reservando tiene más prioridad que
+  la que hizo la reserva anteriormente. En este caso el sistema elimina la reserva actual y
+  genera una nueva con la persona con más prioridad.
+
+Los profesores siempre tienen más prioridad que los alumnos.
+
+4)
+
+Realizar un sistema que controle el consumo de bebidas de personas.
+
+Cada persona debe tener un nombre, apellido y DNI (el DNI debe ser único).
+
+Las bebidas tienen un nombre y un coeficiente de positividad y uno de negatividad.
+
+Existen 3 clases de bebidas:
+
+    Bebidas neutras: en estas bebidas los coeficientes se establecen manualmente.
+
+    Bebidas azucaradas: en estas bebidas se establece un atributo llamado “cantidad de azúcar”,
+    el coeficiente de positividad es siempre 1 y el de negatividad se calcula multiplicando
+    la cantidad de azúcar por 10.
+
+    Bebidas alcohólicas: en estas bebidas se establece un atributo llamado “cantidad de alcohol”,
+    el coeficiente de positividad es siempre cero y el de negatividad se calcula multiplicando
+    la cantidad de alcohol por 20.
+
+Cada persona tienen una lista de bebidas que consumió, indicando:
+	Bebida
+	Cantidad
+
+Se debe poder calcular el coeficiente de hidratación resultante de cada persona. Por ejemplo:
+
+Agua (coef. de negatividad = 0, coef. de positividad = 20)
+Coca (cantidad de azúcar = 5)
+
+Si Juan tomó 3 aguas y 2 cocas:
+
+	Coeficiente resultante para 3 aguas = 3 x (20 - 0) = 60
+	Coeficiente resultante para 2 cocas = 2 x [1 - (5 x 10)] = -98
+
+Coeficiente resultante total = 60 + (-98) = -38
+
+Adicionalmente se debe poder calcular la persona con mejor y con peor coeficiente de hidratación.
