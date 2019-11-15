@@ -37,7 +37,7 @@ public class Main {
                         System.out.println("Nombre no disponible");
                     }
                     else{
-                        mascotas.add(aux2=new Gato);
+                        mascotas.add(aux2=new Gato(n, d));
                     }
                 }
 
@@ -68,8 +68,6 @@ public class Main {
 
     }
 
-
-
     public void eliminarmascota(String matar){
         for(int i=0;i<mascotas.size();i++){
             if(matar==mascotas.get(i).getNombre()){
@@ -81,6 +79,20 @@ public class Main {
     public void modicarMascota(){
 
     }
+
+    public void matarPez(){
+
+        if(vidas==0){
+
+            this.Pez.dispose();
+        }
+        else{
+
+            this.Pez.dispose();
+        }
+
+    }
+
 
 
 

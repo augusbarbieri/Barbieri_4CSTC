@@ -12,6 +12,9 @@ public class Perro extends MascotaSaluda{
             super(newNombre, newDueño, saludo);
         }
 
+        public Perro(String newNombre, String newDueño, int newalegria, String saludo) {
+            super(newNombre, newDueño, newalegria, saludo);
+        }
 
     //Setters
 

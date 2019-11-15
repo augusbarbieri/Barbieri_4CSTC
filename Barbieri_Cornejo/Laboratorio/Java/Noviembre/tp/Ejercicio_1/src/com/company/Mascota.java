@@ -7,6 +7,7 @@ public class Mascota {
         private String nombre;
         private String nombreDueño;
         private int alegria;
+
         boolean aceptarNom = false;
 
 
@@ -18,8 +19,8 @@ public class Mascota {
             alegria = newalegria;
         }
 
-    public Mascota(String newNombre, String newDueño) {
-    }
+        public Mascota(String newNombre, String newDueño) {
+        }
 
 
     //Setters
@@ -49,4 +50,13 @@ public class Mascota {
         public int getAlegria() {
             return alegria;
         }
+
+
+    //Metodos
+
+
+
+
+
+
 }
